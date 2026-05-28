@@ -15,16 +15,26 @@ const TABS = [
 
 export default function App() {
   const [tab, setTab] = useState('home');
-  const screens = { home:<HomeScreen />, todos:<TodosScreen />, health:<HealthScreen />, finance:<FinanceScreen />, settings:<SettingsScreen /> };
+
+  const switchTab = (key) => {
+    setTab(key);
+    window.scrollTo(0, 0);
+  };
+
+  const screens = {
+    home: <HomeScreen />,
+    todos: <TodosScreen />,
+    health: <HealthScreen />,
+    finance: <FinanceScreen />,
+    settings: <SettingsScreen />,
+  };
 
   return (
     <div className="app">
-      <div style={{ flex:1, overflow:'hidden', position:'relative' }}>
-        {screens[tab]}
-      </div>
+      {screens[tab]}
       <nav className="bottom-nav">
         {TABS.map(t => (
-          <button key={t.key} className={`nav-item ${tab===t.key?'active':''}`} onClick={() => setTab(t.key)}>
+          <button key={t.key} className={`nav-item ${tab===t.key?'active':''}`} onClick={() => switchTab(t.key)}>
             <div className="nav-icon">{t.icon}</div>
             <span>{t.label}</span>
           </button>
