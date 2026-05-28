@@ -28,7 +28,7 @@ body { height: 100%; background: var(--bg); color: var(--text); font-family: -ap
 
 .app { display: flex; flex-direction: column; height: 100%; }
 
-.screen { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
+.screen { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 .screen-inner { padding: 0 16px 120px; }
 .screen-header { padding: calc(env(safe-area-inset-top, 20px) + 44px) 16px 16px; display: flex; align-items: center; justify-content: space-between; }
 
