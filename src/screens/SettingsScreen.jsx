@@ -89,7 +89,7 @@ export default function SettingsScreen() {
           <h3>Shash v1.0</h3>
           <div className="caption" style={{ marginTop:4 }}>Built for G — your goals, your plan, your app.</div>
         </div>
-        <div style={{ height:40 }} />
+        <div style={{ height: 300 }} />
       </div>
     </div>
   );
