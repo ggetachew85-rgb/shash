@@ -1,0 +1,9 @@
+{
+  "name": "Shash",
+  "short_name": "Shash",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBFAF7",
+  "theme_color": "#FBFAF7",
+  "icons": []
+}
